@@ -68,8 +68,6 @@ request.addEventListener("load", function () {
 
 var myHeaders = new Headers();
 
-myHeaders.append("Access-Control-Allow-Origin", "*");
-
 myHeaders.append(
   "Authorization",
   "Bearer V4p8ZnsYpezk3FVo37xzQRTSFadSyNodcFqqulhApcK7QYw7SknW8MyBWp37Qrpre77esru0VNnAlJbGXoAojac8jT2Jqx_qNXuX8dE-fdxXpFUMQOf7BxJxvNruYnYx"
@@ -82,7 +80,7 @@ var requestOptions = {
 };
 
 fetch(
-  "https://api.yelp.com/v3/businesses/search?location=San%20Jose,%20CA%2095127&term=restaurants",
+  "https://corsproxy.io/?https://api.yelp.com/v3/businesses/search?location=San Jose, CA 95127&term=restaurants",
   requestOptions
 )
   .then((response) => response.text())
